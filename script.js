@@ -11,10 +11,6 @@ button.addEventListener("click", intentar);
     function intentar(){
         console.log("Intento!")
         const INTENTO = leerIntento();
-        if (INTENTO === palabra ) {
-            console.log("GANASTE!")
-            return
-        }
         const GRID = document.getElementById("grid");
         const ROW = document.createElement('div');
         ROW.className = 'row';

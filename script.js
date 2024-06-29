@@ -7,6 +7,12 @@ const button = document.getElementById("guess-button");
 button.addEventListener("click", intentar);
 
 
+fetch("https://random-word.ryanrk.com/api/en/word/random/?Length=5")
+  .then(response => response.json())
+  .then(response =>{
+    console.log(response)
+    palabra = response[0].toUpperCase();
+  });
 
     function intentar(){
         console.log("Intento!")

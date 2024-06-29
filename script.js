@@ -6,7 +6,6 @@ let intentos = 6;
 const button = document.getElementById("guess-button");
 button.addEventListener("click", intentar);
 
-
 fetch("https://random-word.ryanrk.com/api/en/word/random/?Length=5")
   .then(response => response.json())
   .then(response =>{
@@ -70,5 +69,7 @@ fetch("https://random-word.ryanrk.com/api/en/word/random/?Length=5")
         INPUT.disabled = true;
         button.disabled = true;
         let contenedor = document.getElementById('guesses');
+        let mensajeElement = document.createElement('div');
         contenedor.innerHTML = mensaje;
+        contenedor.appendChild(mensajeElement);
 }
